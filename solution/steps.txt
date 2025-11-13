@@ -50,3 +50,19 @@ kubectl version --client
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+
+==========================================================================
+
+Plugins required on jenkins --> 
+
+1. docker pipeline plugin
+2. AWS credentials plugin
+3. AWS Steps plugin
+
+==========================================================================
+
+on jenkins make sure to add credentials for :
+
+1. dockerhub
+2. aws-creds (contain AK/SK of your aws account)
+3. github-creds (for using argocd we need to put github credentials on jenkins for doing git push of updated k8s yaml files)
